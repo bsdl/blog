@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">博客详情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/customize.css" th:href="@{/css/customize.css}">
+<body>
+
+<!--导航-->
+<nav th:fragment="menu(idx)" class="ui inverted attached segment c-padded-tb-mini c-shadow-small animate__animated animate__fadeInDown">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">CliffsOfDover</h2>
+            <a href="#" th:href="@{/}" class="c-nav-item item c-mobile-hide" th:classappend="${idx==1} ? 'active'"><i
+                    class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="c-nav-item item c-mobile-hide" th:classappend="${idx==2} ? 'active'"><i
+                    class="bookmark icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="c-nav-item item c-mobile-hide" th:classappend="${idx==3} ? 'active'"><i
+                    class="tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}" class="c-nav-item item c-mobile-hide" th:classappend="${idx==4} ? 'active'"><i
+                    class="clone icon"></i>归档</a>
+            <a href="#" th:href="@{/about}" class="c-nav-item item c-mobile-hide" th:classappend="${idx==5} ? 'active'"><i
+                    class="info icon"></i>关于本站</a>
+            <div class="right item c-mobile-hide">
+                <form action="#" name="search" method="post" th:action="@{/search}" target="_blank">
+                    <div class="ui icon inverted transparent input">
+                        <label>
+                            <input type="text" name="query" placeholder="Search......" th:value="${query}">
+                        </label>
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-top-right c-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--底部-->
+<footer th:fragment="footer" class="ui inverted vertical segment c-padded-tb-massive animate__animated animate__fadeIn">
+    <div class="ui center aligned container">
+        <!--            divided 分割线-->
+        <div class="ui inverted stackable divided grid">
+            <div class="column">
+                <p class="ui">这是我的个人博客，会分享关于编程、写作、思考相关的内容，希望可以给来到这儿的人有所帮助~</p>
+            </div>
+
+        </div>
+        <div class="ui inverted section divider"></div>
+
+        <img src="" th:src="@{/images/snoopy.png}" class="ui centered mini image" alt="">
+        <br>
+        <p class="c-text-lined c-text-spaced">Copyright © 2019-2020 Designed by bsdl</p>
+        <!--            <div class="three wide column">-->
+        <!--                <div class="ui inverted link list">-->
+        <!--                    <div class="item">-->
+        <!--                        <img src="../static/images/snoopy.png" th:src="@{/images/snoopy.png}" class="ui rounded image"-->
+        <!--                             alt="" style="width: 100px">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="three wide column">-->
+        <!--                <h4 class="ui inverted header">new blog</h4>-->
+        <!--                <div class="ui inverted link list">-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="three wide column">-->
+        <!--                <h4 class="ui inverted header">new blog</h4>-->
+        <!--                <div class="ui inverted link list">-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                    <a href="#" class="item">a new one</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="thirteen wide column">-->
+        <!--                <div class="ui inverted link list">-->
+        <!--                    <h4 class="ui inverted header">new blog</h4>-->
+        <!--                    <p class="ui">The early bird catches the worm.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+    </div>
+</footer>
+
+<div th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+</div>
+</body>
+
+</html>

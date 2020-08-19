@@ -1,0 +1,13 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+comment:
+  avatar:
+    /images/snoopy.png
