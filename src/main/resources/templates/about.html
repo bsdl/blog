@@ -41,7 +41,7 @@
       <div class="ui stackable grid">
         <div class="eleven wide column">
           <div class="ui segment">
-            <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
+            <img src="../static/images/AbbeyRoad.jpg" th:src="@{/images/AbbeyRoad.jpg}" alt="" class="ui rounded image">
           </div>
         </div>
         <div class="five wide column">
@@ -49,8 +49,11 @@
             <div class="ui header">关于本站</div>
           </div>
           <div class="ui attached segment">
-            <p class="m-text">😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡</p>
-            <p class="m-text">😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡</p>
+            <p class="m-text">为了练习Spring Boot所开发的博客网站</p>
+            <p class="m-text">前端采用<a href="https://semantic-ui.com/">Semantic UI</a></p>
+            <p class="m-text">数据源采用JPA、MySQL</p>
+            <p class="m-text">使用Docker快速部署</p>
+            <p class="m-text">项目地址点击<a href="https://github.com/bsdl/blog">这里</a></p>
           </div>
           <div class="ui attached segment">
             <div class="ui orange basic left pointing label">编程</div>
@@ -59,16 +62,10 @@
             <div class="ui orange basic left pointing label">运动</div>
           </div>
           <div class="ui attached segment">
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">Java</div>
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">JavaScript</div>
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">Node</div>
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">React</div>
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">RN</div>
-            <div class="ui teal basic left pointing label c-margin-tb-tiny">MYSQL</div>
             <div class="ui teal basic left pointing label c-margin-tb-tiny">...</div>
           </div>
           <div class="ui bottom attached segment">
-            <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+            <a href="https://github.com/bsdl" target="_blank" class="ui circular icon button"><i class="github icon"></i></a>
 <!--            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>-->
 <!--            <a href="#" class="ui qq circular icon button" data-content="865729312" data-position="bottom center"><i class="qq icon"></i></a>-->
           </div>
@@ -124,9 +121,10 @@
     </div>
   </footer>
 
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
   <script>
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');

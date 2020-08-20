@@ -1,5 +1,6 @@
 body {
     background: url("../images/light-grey-terrazzo.png");
+    background-attachment: fixed;
 }
 
 
@@ -15,6 +16,7 @@ body {
 .c-padded {
     padding: 1em !important;
 }
+
 .c-padded-big {
     padding: 2em !important;
 }
@@ -28,6 +30,7 @@ body {
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
 }
+
 .c-padded-tb-small {
     padding-top: 0.5em !important;
     padding-bottom: 0.5em !important;
@@ -37,6 +40,7 @@ body {
     padding-top: 1em !important;
     padding-bottom: 1em !important;
 }
+
 .c-padded-tb-big {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
@@ -90,12 +94,12 @@ body {
 }
 
 .c-container {
-    max-width:75em !important;
+    max-width: 75em !important;
     margin: auto !important;
 }
 
 .c-container-small {
-    max-width:64em !important;
+    max-width: 60em !important;
     margin: auto !important;
 }
 
@@ -105,18 +109,20 @@ body {
 }
 
 
-
 @media screen and (max-width: 768px) {
     .c-mobile-hide {
         display: none !important;
     }
+
     .c-mobile-show {
         display: block !important;
     }
+
     .c-padded-lr-responsive {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
     .c-mobile-wide {
         width: 100% !important;
     }
@@ -162,6 +168,7 @@ body {
     position: fixed !important;
     z-index: 10 !important;
 }
+
 .c-right-bottom {
     bottom: 0 !important;
     right: 0 !important;
