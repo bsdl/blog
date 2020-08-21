@@ -35,11 +35,39 @@
 </nav>
 
 <!--中间内容-->
-<div class="c-padded-tb-large c-container" style="width:900px" !important>
+<div class="c-padded-tb-large c-container">
     <div class="ui container">
         <div class="ui stackable grid">
-<!--            左边博客列表-->
-            <div class="eleven wide column animate__animated animate__fadeIn">
+<!--              最右边关于我-->
+            <div class="four wide column animate__animated animate__fadeIn">
+                <div class="ui raised teal card">
+                    <img src="../images/georgeharrison.jpg" th:src="@{/images/georgeharrison.jpg}" class="ui image">
+<!--                    <div class="ui circular rotate left reveal image">-->
+<!--                        <img src="../images/georgeharrison.jpg" th:src="@{/images/georgeharrison.jpg}" class="visible content">-->
+<!--                        <img src="../images/georgeharrison.jpg" th:src="@{/images/georgeharrison.jpg}" class="hidden content">-->
+<!--                    </div>-->
+                    <div class="content">
+                        <a class="header">bsdl</a>
+                        <div class="meta">
+                            <span class="date">Joined in 2020</span>
+                        </div>
+                        <div class="description">
+                            得多写点文章。。。
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <a href="https://github.com/bsdl" target="_blank" class="ui circular icon button">
+                            <i class="github icon"></i>
+                        </a>
+                        <div class="ui circular icon button" data-content="sdlrr24@outlook.com">
+                            <i class="envelope icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            中间博客列表-->
+            <div class="eight wide column animate__animated animate__fadeIn">
                 <!--header-->
                 <div class="ui top attached segment">
                     <div class="ui middle aligned two column grid">
@@ -54,7 +82,7 @@
                 <!-- content-->
                 <div class="ui attached segment">
                     <div class="ui padded vertical segment c-padded-big" th:each="blog : ${page.content}">
-                        <div class="ui mobile aligned middle reversed stackable grid" >
+                        <div class="ui mobile middle aligned reversed stackable grid" >
                             <div class="eleven wide column">
                                 <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" style="color: #333 !important;" th:text="${blog.title}">Brown Eyed Girl</a></h3>
                                 <p class="c-p-text" th:text="|${blog.description}......|">Hey, where did we go?
@@ -79,13 +107,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="right aligned middle aligned five wide column">
+                                    <div class="right aligned five wide column">
                                         <a target="_blank" class="ui basic teal label c-padded-tiny c-text-thin" th:text="${blog.type.name}">Van Morrison</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="five wide column">
-                                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="ui vertical floated middle aligned">
                                     <img src="https://picsum.photos/id/17/800/450"
                                          alt="" class="ui rounded image" th:src="@{${blog.headPicture}}">
                                 </a>
@@ -108,7 +136,7 @@
             </div>
 
 <!--            右边的top-->
-            <div class="five wide column animate__animated animate__fadeIn">
+            <div class="four wide column animate__animated animate__fadeIn">
 <!--                分类-->
                 <div class="ui segments">
                     <div class="ui secondary segment">
@@ -158,46 +186,23 @@
                     <div class="ui segment" th:each="recommendBlog : ${recommendBlogs}">
                         <a href="#" th:href="@{/blog/{id}(id=${recommendBlog.id})}" target="_blank" class="c-text-thin" style="color: gray" th:text="${recommendBlog.title}">Second Hand News</a>
                     </div>
-                    <!--/*-->
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="c-text-thin" style="color: gray">Never Looking Back Again</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="c-text-thin" style="color: gray">Sweet Baby James</a>
-                    </div>
-                    <div class="ui segment">
-                        <a href="#" target="_blank" class="c-text-thin" style="color: gray">Black Muddy River</a>
-                    </div>
-                    <!--*/-->
                 </div>
                 <br>
-<!--                关于我-->
-                <h4 class="ui horizontal divider header">About Me</h4>
-                <div class="ui card fluid">
-                    <div class="image">
-                        <img src="../static/images/georgeharrison.jpg" th:src="@{/images/georgeharrison.jpg}" alt="" class="ui rounded image">
-                    </div>
-                    <div class="content">
-                        <a class="header">bsdl</a>
-                        <div class="meta">
-                            <span class="date">Best wishes to you</span>
-                        </div>
-                        <div class="description">
-                            <p>编程新手</p>
-                            <p>希望能变得更强</p>
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a href="#" target="_blank" ><i class="github icon big"></i></a>
-                    </div>
-                </div>
-
+<!--                <div class="ui segments">-->
+<!--                    <div class="ui secondary segment">-->
+<!--                        疫情地图😷-->
+<!--                    </div>-->
+<!--                    <div class="ui segment">-->
+<!--                        <iframe src="https://www.lovestu.com/api/project/cnmapyinqing/obj.php"  frameborder="no" border="0" width="100%">-->
+<!--                        </iframe>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
 
 </div>
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <!--底部-->
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment c-padded-tb-massive">
     <div class="ui center aligned container">
